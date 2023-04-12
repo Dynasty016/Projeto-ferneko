@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Projeto_ferneko_2.Models;
 
-namespace MeuProjeto.Controllers
+namespace Projeto_ferneko_2.Controllers
 {
     public class ProdutosController : Controller
     {
         private readonly List<Produto> _produtos = new List<Produto>
         {
-            new Produto { Id = 1, Nome = "Produto 1", Preco = 10.0m },
-            new Produto { Id = 2, Nome = "Produto 2", Preco = 20.0m },
-            new Produto { Id = 3, Nome = "Produto 3", Preco = 30.0m }
+            new Produto("") { Id = 1, Nome = "Produto 1", Preco = 10.0m },
+            new Produto("") { Id = 2, Nome = "Produto 2", Preco = 20.0m },
+            new Produto("") { Id = 3, Nome = "Produto 3", Preco = 30.0m }
         };
 
         // GET: Produtos
@@ -33,16 +34,5 @@ namespace MeuProjeto.Controllers
         }
     }
 
-    internal class Produto
-    {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-
-        public Produto(string nome)
-        {
-            Nome = nome;
-        }
-
-        public decimal Preco { get; set; }
-    }
+   
 }

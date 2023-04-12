@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
-namespace MeuProjeto.Controllers
+using Projeto_ferneko_2.Models;
+namespace Projeto_ferneko_2.Controllers
 {
     public class FornecedoresController : Controller
     {
@@ -33,10 +33,5 @@ namespace MeuProjeto.Controllers
         }
     }
 
-    internal class Fornecedor
-    {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Telefone { get; set; }
-    }
+   
 }
